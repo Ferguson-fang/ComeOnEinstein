@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E2E2E2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="#000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/method_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@mipmap/home_add" />
+
+                    <TextView
+                        android:id="@+id/method_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/method_iv"
+                        android:text="用户名"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/method_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@id/method_iv"
+                        android:text="播放量"
+                        android:textColor="#898989"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:id="@+id/method_follow"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/method_follow" />
+
+                    <ImageView
+                        android:id="@+id/method_like"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/method_like" />
+
+                    <ImageView
+                        android:id="@+id/method_favorite"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/method_favorite" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E2E2E2"
+                android:layout_marginTop="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="更多视频  >"
+                    android:textSize="20sp"
+                    android:textColor="#000"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/video_item_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E2E2E2" />
+            <TextView
+                android:id="@+id/method_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/method_iv"
+                android:text="评论(数量)"
+                android:textColor="#898989"
+                android:textSize="18sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mypublish_recyclerview"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:id="@+id/video_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@mipmap/video_item_back"/>
+    <TextView
+        android:id="@+id/video_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="15dp"
+        android:text="视频名称"
+        android:textColor="#AAAAAA"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/video_back_iv"/>
+
+</RelativeLayout>

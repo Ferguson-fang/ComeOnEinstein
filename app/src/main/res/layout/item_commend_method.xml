@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <ImageView
+        android:id="@+id/item_commend_method_iv"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/item_method_black"/>
+    <TextView
+        android:id="@+id/item_commend_method_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="方法名称"
+        android:layout_below="@id/item_commend_method_iv"
+        android:paddingLeft="20dp"/>
+    <TextView
+        android:id="@+id/item_commend_method_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#727272"
+        android:textSize="12sp"
+        android:text="收藏量："
+        android:layout_below="@id/item_commend_method_name"
+        android:layout_marginLeft="15dp"/>
+    <TextView
+        android:id="@+id/item_commend_method_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#727272"
+        android:textSize="12sp"
+        android:text="xxx"
+        android:paddingLeft="15dp"
+        android:layout_below="@id/item_commend_method_name"
+        android:layout_toRightOf="@id/item_commend_method_string" />
+
+
+</RelativeLayout>

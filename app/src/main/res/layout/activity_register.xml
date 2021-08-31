@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@mipmap/register_back"
+        app:title="手机号注册"
+        app:titleTextColor="#000"
+        app:titleMarginStart="100dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E2E2E2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="+86"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:padding="15dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:background="#4BF6EFEF"
+            android:textColorHint="#A8A8A8">
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#000"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="2dp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:background="#E2E2E2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:padding="15dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:background="#4BF6EFEF"
+            android:textColorHint="#A8A8A8">
+            <EditText
+                android:id="@+id/register_confirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#000"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="60dp"
+            android:background="#E2E2E2"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:hint="获取验证码"
+            android:textColorHint="#A8A8A8"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="2dp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:background="#E2E2E2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:padding="15dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入6-16位密码"
+            android:background="#4BF6EFEF"
+            android:textColorHint="#A8A8A8">
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#000"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="2dp"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:background="#E2E2E2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_btn"
+            android:text="注册并登录"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4BF6EFEF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户注册即代表同意"
+            android:textColor="#A8A8A8"
+            android:id="@+id/checkbox"
+            android:theme="@style/MyCheckBox"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户使用条款》"
+            android:textColor="#022DAE"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="和"
+            android:textColor="#A8A8A8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《隐私政策》"
+            android:textColor="#022DAE"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

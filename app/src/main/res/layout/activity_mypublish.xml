@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myPublish_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@mipmap/register_back"
+        app:title="@string/my_publish"
+        app:titleTextColor="#000"
+        app:titleMarginStart="100dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="#22938888">
+
+
+            <TextView
+                android:id="@+id/myPublish_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_publish_video"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:padding="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myPublish_rv_video"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="20dp"
+                android:background="@drawable/mypublish_recyclerview"/>
+            <TextView
+                android:id="@+id/myPublish_method_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_publish_method"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:padding="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myPublish_rv_method"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="20dp"
+                android:background="@drawable/mypublish_recyclerview"/>
+            <TextView
+                android:id="@+id/myPublish_markdown_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_publish_markdown"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:padding="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myPublish_rv_markdown"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="20dp"
+                android:background="@drawable/mypublish_recyclerview"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/neat_popular_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="工整列榜  >"
+                android:textSize="20sp"
+                android:textColor="#000"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/neat_popular_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+
+            <TextView
+                android:id="@+id/content_popular_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="内容集中榜  >"
+                android:textSize="20sp"
+                android:textColor="#000"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/content_popular_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/videoCommend_carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ccc"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/chinese"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/chinese"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                    <ImageView
+                        android:id="@+id/math"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/math"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                    <ImageView
+                        android:id="@+id/english"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/english"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/physics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/physics"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                    <ImageView
+                        android:id="@+id/biology"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/biology"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                    <ImageView
+                        android:id="@+id/chemistry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/chemistry"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/polity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/polity"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                    <ImageView
+                        android:id="@+id/history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/history"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                    <ImageView
+                        android:id="@+id/geography"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/geography"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

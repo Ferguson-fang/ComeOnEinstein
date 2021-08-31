@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        id="@+id/tab_home"
+        icon="@mipmap/home_commend"
+        title="推荐"
+        />
+    <tab
+        id="@+id/tab_course"
+        icon="@mipmap/home_course"
+        title="我的课程"/>
+    <tab
+        id="@+id/tab_add"
+        icon="@mipmap/home_add"
+        title="我的课程"/>
+    <tab
+        id="@+id/tab_markdown"
+        icon="@mipmap/home_markdown"
+        title="我的笔记"/>
+    <tab
+        id="@+id/tab_mine"
+        icon="@mipmap/home_mine"
+        title="个人中心"/>
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ComeOnEinstein</string>
+    <string name="chinese">初中语文</string>
+    <string name="inner_strength_rank">课内强化排行榜  ></string>
+    <string name="outer_learning_rank">课外学习排行榜  ></string>
+    <string name="final_break_rank">期末冲刺排行榜  ></string>
+    <string name="final_exam_rank">会考中考排行榜  ></string>
+    <string name="register">注册</string>
+    <string name="login_way">手机验证码/密码登录</string>
+    <string name="methodOrMarkdown_introduce">笔记/方法介绍</string>
+    <string name="my_favorite_method">我收藏的方法  ></string>
+    <string name="my_favorite_markdown">我收藏的笔记  ></string>
+    <string name="my_favorite_video">我收藏的视频  ></string>
+    <string name="my_publish">我的发布</string>
+    <string name="my_publish_method">我发布的方法  ></string>
+    <string name="my_publish_markdown">我发布的笔记  ></string>
+    <string name="my_publish_video">我发布的视频  ></string>
+    <string name="phoneNumber_login">手机号登录</string>
+</resources>

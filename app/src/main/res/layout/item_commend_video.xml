@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <ImageView
+        android:id="@+id/item_commend_video_iv"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:background="@mipmap/item_method_black"/>
+    <TextView
+        android:id="@+id/item_commend_video_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="视频名称"
+        android:layout_below="@id/item_commend_video_iv"
+        android:paddingLeft="30dp"/>
+
+
+</RelativeLayout>
