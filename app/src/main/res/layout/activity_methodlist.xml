@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="300dp"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:id="@+id/methodList_toolbar"
+        app:navigationIcon="@mipmap/subject_back"
+        android:background="#00000000"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#22938888">
+        <TextView
+            android:id="@+id/methodList_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我点赞的课程  >"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:padding="15dp"/>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/methodList_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/methodList_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/mypublish_recyclerview"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

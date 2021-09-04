@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.activity_myfavortie.myFavorite_rv_markdown
 import kotlinx.android.synthetic.main.activity_myfavortie.myFavorite_rv_method
 import kotlinx.android.synthetic.main.activity_myfavortie.myFavorite_rv_video
 import kotlinx.android.synthetic.main.activity_myfavortie.myFavorite_video_title
-import kotlinx.android.synthetic.main.fragment_myfavorite.*
 
 class MyFavoriteActivity : BaseActivity() {
     private val list = listOf(
@@ -42,6 +41,9 @@ class MyFavoriteActivity : BaseActivity() {
         super.initListener()
 
         initItemIntentListener()
+        myFavorite_toolbar.setNavigationOnClickListener {
+            finish()
+        }
     }
 
 

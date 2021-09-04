@@ -31,17 +31,17 @@ class MyPublishActivity : BaseActivity(){
         initRecyclerView()
 
         myPublish_video_title.setOnClickListener {
-            val intent = Intent(MyApplication.context, RankListActivity::class.java)
+            val intent = Intent(MyApplication.context, VideoListActivity::class.java)
             intent.putExtra("list_title",myPublish_video_title.text)
             startActivity(intent)
         }
         myPublish_method_title.setOnClickListener {
-            val intent = Intent(MyApplication.context, RankListActivity::class.java)
+            val intent = Intent(MyApplication.context, MethodListActivity::class.java)
             intent.putExtra("list_title",myPublish_method_title.text)
             startActivity(intent)
         }
         myPublish_markdown_title.setOnClickListener {
-            val intent = Intent(MyApplication.context, RankListActivity::class.java)
+            val intent = Intent(MyApplication.context, MarkdownListActivity::class.java)
             intent.putExtra("list_title",myPublish_markdown_title.text)
             startActivity(intent)
         }

@@ -14,14 +14,8 @@ import com.example.comeoneinstein.adapter.MarkdownAdapter
 import com.example.comeoneinstein.adapter.MethodAdapter
 import com.example.comeoneinstein.adapter.VideoAdapter
 import com.example.comeoneinstein.bean.ItemBean
-import com.example.comeoneinstein.ui.activity.MethodItemActivity
-import com.example.comeoneinstein.ui.activity.RankListActivity
-import com.example.comeoneinstein.ui.activity.VideoItemActivity
-import com.example.comeoneinstein.util.UiRefreshUtil
-import kotlinx.android.synthetic.main.fragment_markdowncommend.*
+import com.example.comeoneinstein.ui.activity.*
 import kotlinx.android.synthetic.main.fragment_mylike.*
-import org.jetbrains.anko.support.v4.runOnUiThread
-import kotlin.concurrent.thread
 
 class MyLikeFragment : Fragment()  {
     private val list = listOf(
@@ -48,17 +42,17 @@ class MyLikeFragment : Fragment()  {
         initRecyclerView()
 
         myLike_method_title.setOnClickListener {
-            val intent = Intent(MyApplication.context, RankListActivity::class.java)
+            val intent = Intent(MyApplication.context, MethodListActivity::class.java)
             intent.putExtra("list_title",myLike_method_title.text)
             startActivity(intent)
         }
         myLike_markdown_title.setOnClickListener {
-            val intent = Intent(MyApplication.context, RankListActivity::class.java)
+            val intent = Intent(MyApplication.context, MarkdownListActivity::class.java)
             intent.putExtra("list_title",myLike_markdown_title.text)
             startActivity(intent)
         }
         myLike_video_title.setOnClickListener {
-            val intent = Intent(MyApplication.context, RankListActivity::class.java)
+            val intent = Intent(MyApplication.context, VideoListActivity::class.java)
             intent.putExtra("list_title",myLike_video_title.text)
             startActivity(intent)
         }

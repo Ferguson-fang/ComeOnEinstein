@@ -1,10 +1,12 @@
 package com.example.comeoneinstein.ui.fragment
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.comeoneinstein.MyApplication
@@ -21,7 +23,7 @@ import org.jetbrains.anko.support.v4.runOnUiThread
 import kotlin.concurrent.thread
 
 class CourseRecordsFragment : Fragment(){
-    private val list = listOf(
+    private var list : ArrayList<ItemBean> = arrayListOf(
         ItemBean("名称","发布时间","次数","https://pic.baike.soso.com/ugc/baikepic2/5410/ori-20210330181534-1864981271_jpg_1215_717_139880.jpg/0"),
         ItemBean("名称","发布时间","次数","https://pic.baike.soso.com/ugc/baikepic2/5410/ori-20210330181534-1864981271_jpg_1215_717_139880.jpg/0"),
         ItemBean("名称","发布时间","次数","https://pic.baike.soso.com/ugc/baikepic2/5410/ori-20210330181534-1864981271_jpg_1215_717_139880.jpg/0"),
@@ -54,6 +56,25 @@ class CourseRecordsFragment : Fragment(){
                 startActivity(intent)
             }
         })
+
+        recordsAdapter.setOnItemLongClickListener(object : VideoAdapter.OnItemLongClickListener{
+            override fun onItemLongClick(view: View?, position: Int) {
+
+                AlertDialog.Builder(activity).apply {
+                    setTitle("温馨提示 ：")
+                    setMessage("您确定要删除吗")
+                    setCancelable(true)
+                    setPositiveButton("确定"){ dialog,which ->
+                        list.remove(list[position])
+                        Toast.makeText(MyApplication.context,"删除了第$position 项", Toast.LENGTH_SHORT).show()
+                        recordsAdapter.notifyDataSetChanged()
+                    }
+                    setNegativeButton("取消",null)
+                    show()
+                }
+            }
+        })
+
         courseRecords_rv.adapter = recordsAdapter
         //下拉刷新
         UiRefreshUtil.refreshItem(this.activity,recordsAdapter,courseRecords_refresh)

@@ -15,6 +15,7 @@ import com.example.comeoneinstein.ui.activity.MyPublishActivity
 class MarkdownAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<MarkdownAdapter.ViewHolder>() {
 
     private var mOnItemClickListener: MarkdownAdapter.OnItemClickListener? = null
+    private var monItemLongClickListener : OnItemLongClickListener? = null
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title : TextView = itemView.findViewById(R.id.item_markdown_name)
@@ -40,6 +41,10 @@ class MarkdownAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<M
         holder.itemView.setOnClickListener {
             mOnItemClickListener?.onItemClick(it,position)
         }
+        holder.itemView.setOnLongClickListener {
+            monItemLongClickListener?.onItemLongClick(it,position)
+            true
+        }
         //图片加载
         Glide.with(MyApplication.context).load(items.imageURL).placeholder(R.mipmap.item_method_black).into(holder.imageURL)
     }
@@ -52,5 +57,15 @@ class MarkdownAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<M
 
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
         mOnItemClickListener = onItemClickListener
+    }
+
+    //内部接口
+    interface OnItemLongClickListener {
+        fun onItemLongClick(view: View?, position: Int)
+    }
+
+
+    fun setOnItemLongClickListener(onItemLongClickListener: OnItemLongClickListener) {
+        monItemLongClickListener = onItemLongClickListener
     }
 }

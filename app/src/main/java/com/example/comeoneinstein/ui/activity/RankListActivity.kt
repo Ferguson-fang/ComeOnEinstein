@@ -1,10 +1,15 @@
 package com.example.comeoneinstein.ui.activity
 
+import android.app.AlertDialog
+import android.app.ProgressDialog.show
 import android.content.Intent
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.comeoneinstein.MyApplication
 import com.example.comeoneinstein.R
+import com.example.comeoneinstein.adapter.CommendMethodAdapter
 import com.example.comeoneinstein.adapter.VideoAdapter
 import com.example.comeoneinstein.base.BaseActivity
 import com.example.comeoneinstein.bean.ItemBean
@@ -17,7 +22,7 @@ import kotlinx.android.synthetic.main.activity_ranklist.*
  * 启动不同的排行榜
  * */
 class RankListActivity : BaseActivity() {
-    private var list = listOf(
+    private var list : ArrayList<ItemBean> = arrayListOf(
         ItemBean("名称","发布时间","次数","https://pic.baike.soso.com/ugc/baikepic2/5410/ori-20210330181534-1864981271_jpg_1215_717_139880.jpg/0"),
         ItemBean("名称","发布时间","次数","https://pic.baike.soso.com/ugc/baikepic2/5410/ori-20210330181534-1864981271_jpg_1215_717_139880.jpg/0"),
         ItemBean("名称","发布时间","次数","https://pic.baike.soso.com/ugc/baikepic2/5410/ori-20210330181534-1864981271_jpg_1215_717_139880.jpg/0"),
@@ -46,13 +51,16 @@ class RankListActivity : BaseActivity() {
 
         rankList_rv.layoutManager = LinearLayoutManager(MyApplication.context)
         val rankListAdapter = VideoAdapter(list)
+
         rankListAdapter.setOnItemClickListener(object : VideoAdapter.OnItemClickListener{
             override fun onItemClick(view: View?, position: Int) {
                 val intent = Intent(MyApplication.context, VideoItemActivity::class.java)
                 startActivity(intent)
             }
         })
+
         rankList_rv.adapter = rankListAdapter
+
         //下拉刷新
         UiRefreshUtil.refreshItem(this,rankListAdapter,rankList_refresh)
 

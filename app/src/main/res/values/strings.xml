@@ -8,9 +8,12 @@
     <string name="register">注册</string>
     <string name="login_way">手机验证码/密码登录</string>
     <string name="methodOrMarkdown_introduce">笔记/方法介绍</string>
+    <string name="setting">设置</string>
+    <string name="my_favorite">我的收藏</string>
     <string name="my_favorite_method">我收藏的方法  ></string>
     <string name="my_favorite_markdown">我收藏的笔记  ></string>
     <string name="my_favorite_video">我收藏的视频  ></string>
+
     <string name="my_publish">我的发布</string>
     <string name="my_publish_method">我发布的方法  ></string>
     <string name="my_publish_markdown">我发布的笔记  ></string>

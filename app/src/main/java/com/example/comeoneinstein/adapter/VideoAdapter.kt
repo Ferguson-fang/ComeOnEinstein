@@ -12,8 +12,8 @@ import com.example.comeoneinstein.R
 import com.example.comeoneinstein.bean.ItemBean
 
 class VideoAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<VideoAdapter.ViewHolder>() {
-    private var mOnItemClickListener: VideoAdapter.OnItemClickListener? = null
-
+    private var mOnItemClickListener: OnItemClickListener? = null
+    private var monItemLongClickListener : OnItemLongClickListener? = null
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title : TextView = itemView.findViewById(R.id.item_video_name)
         val time : TextView = itemView.findViewById(R.id.item_video_time)
@@ -38,6 +38,11 @@ class VideoAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<Vide
         holder.itemView.setOnClickListener {
             mOnItemClickListener?.onItemClick(it,position)
         }
+        holder.itemView.setOnLongClickListener {
+            monItemLongClickListener?.onItemLongClick(it,position)
+            true
+        }
+
         //图片加载
         Glide.with(MyApplication.context).load(items.imageURL).placeholder(R.mipmap.item_video_black).into(holder.imageURL)
     }
@@ -51,4 +56,16 @@ class VideoAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<Vide
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
         mOnItemClickListener = onItemClickListener
     }
+
+    //内部接口
+    interface OnItemLongClickListener {
+        fun onItemLongClick(view: View?, position: Int)
+    }
+
+
+    fun setOnItemLongClickListener(onItemLongClickListener: OnItemLongClickListener) {
+        monItemLongClickListener = onItemLongClickListener
+    }
+
+
 }

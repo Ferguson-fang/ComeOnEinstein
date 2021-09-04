@@ -12,8 +12,8 @@ import com.example.comeoneinstein.R
 import com.example.comeoneinstein.bean.CommendMethodItemBean
 
 class CommendMethodAdapter(private val list: List<CommendMethodItemBean>) : RecyclerView.Adapter<CommendMethodAdapter.ViewHolder>(){
-    private var mOnItemClickListener: CommendMethodAdapter.OnItemClickListener? = null
-
+    private var mOnItemClickListener: OnItemClickListener? = null
+    private var monItemLongClickListener : OnItemLongClickListener? =null
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title : TextView = itemView.findViewById(R.id.item_commend_method_name)
         val amount : TextView = itemView.findViewById(R.id.item_commend_method_amount)
@@ -48,6 +48,16 @@ class CommendMethodAdapter(private val list: List<CommendMethodItemBean>) : Recy
 
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
         mOnItemClickListener = onItemClickListener
+    }
+
+    //内部接口
+    interface OnItemLongClickListener {
+        fun onItemLongClick(view: View?, position: Int)
+    }
+
+
+    fun setOnItemLongClickListener(onItemLongClickListener: OnItemLongClickListener) {
+        monItemLongClickListener = onItemLongClickListener
     }
 
 }

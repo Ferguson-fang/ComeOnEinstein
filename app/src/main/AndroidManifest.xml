@@ -30,6 +30,9 @@
         <activity android:name=".ui.activity.AboutActivity"/>
         <activity android:name=".ui.activity.RankListActivity"/>
         <activity android:name=".ui.activity.MyFavoriteActivity"/>
+        <activity android:name=".ui.activity.MarkdownListActivity"/>
+        <activity android:name=".ui.activity.MethodListActivity"/>
+        <activity android:name=".ui.activity.VideoListActivity"/>
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
