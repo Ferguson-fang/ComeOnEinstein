@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="20dp">
-
+        <!--
         <com.synnapps.carouselview.CarouselView
             android:id="@+id/videoCommend_carouselView"
             android:layout_width="match_parent"
@@ -16,7 +16,11 @@
             app:radius="6dp"
             app:slideInterval="3000"
             app:strokeColor="#FF777777"
-            app:strokeWidth="1dp"/>
+            app:strokeWidth="1dp"/>-->
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
         <TextView
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
