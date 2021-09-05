@@ -10,8 +10,9 @@ import com.bumptech.glide.Glide
 import com.example.comeoneinstein.MyApplication
 import com.example.comeoneinstein.R
 import com.example.comeoneinstein.bean.CommendMethodItemBean
+import com.example.comeoneinstein.bean.ItemBean
 
-class CommendMethodAdapter(private val list: List<CommendMethodItemBean>) : RecyclerView.Adapter<CommendMethodAdapter.ViewHolder>(){
+class CommendMethodAdapter(private val list: List<ItemBean>) : RecyclerView.Adapter<CommendMethodAdapter.ViewHolder>(){
     private var mOnItemClickListener: OnItemClickListener? = null
     private var monItemLongClickListener : OnItemLongClickListener? =null
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -28,7 +28,8 @@
                 android:layout_height="2dp"
                 android:background="#E2E2E2" />
 
-            <ImageView
+            <com.youth.banner.Banner
+                android:id="@+id/method_item_content"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:background="#000"/>

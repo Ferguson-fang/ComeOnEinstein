@@ -16,4 +16,11 @@ class DataModel {
         @PrimaryKey(autoGenerate = true)//设置为主键，autoGenerate = true主键的值自动生成
         var id:Long = 0
     }
+
+    data class MethodContentBanner(val imageUrl : String,val title : String,val viewType : Int)
+    /*var imageRes: Int? = null
+    var imageUrl: String? = null
+    var title: String?
+    var viewType: Int
+    * */
 }
